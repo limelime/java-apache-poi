@@ -1,7 +1,7 @@
 package net.openwritings.xngo.tutorial.poi;
 
 /**
- * Example showing how to read and write Excel file(i.e *.xls or *.xlsx).
+ * Example showing how to write and read Excel file(i.e *.xls or *.xlsx).
  * JAR files needed:
  *    poi-*.jar
  *    poi-ooxml-*.jar
@@ -22,14 +22,10 @@ import org.apache.poi.ss.usermodel.Workbook;
  
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
  
-public class PoiExample
-{
+public class PoiExample{
  
-    public static void main(String[] args)
-    {
-        try
-        {
-            //***********************************
+    public static void main(String[] args){
+        try{
             // Create an Excel file.
             //***********************************
             Workbook writeWorkbook = new HSSFWorkbook();
@@ -45,7 +41,6 @@ public class PoiExample
             fileOut.close();
             writeWorkbook.close();
  
-            //***********************************
             // Read an Excel file.
             //***********************************
  
@@ -67,12 +62,10 @@ public class PoiExample
             // Close the workbook.
             readWorkbook.close();
         }
-        catch(FileNotFoundException e)
-        {
+        catch(FileNotFoundException e){
             System.out.println(e);
         }
-        catch(IOException e)
-        {
+        catch(IOException e){
             System.out.println(e);
         }
  
