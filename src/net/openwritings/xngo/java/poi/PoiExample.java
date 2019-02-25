@@ -1,4 +1,4 @@
-package net.openwritings.xngo.tutorial.poi;
+package net.openwritings.xngo.java.poi;
 
 /**
  * Example showing how to write and read Excel file(i.e *.xls or *.xlsx).
