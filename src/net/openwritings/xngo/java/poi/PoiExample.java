@@ -5,8 +5,8 @@ package net.openwritings.xngo.java.poi;
  * JAR files needed:
  *    poi-*.jar
  *    poi-ooxml-*.jar
- * If you only need to handle Excel 2007 OOXML (.xlsx) file format, then you can use XSSF* classes.
- * If you only need to handle Excel 97-2003(.xls) file format, then you can use HSSF* classes.
+ * If you need to handle Excel 2007 OOXML (.xlsx) file format, then use XSSF* classes.
+ * If you need to handle Excel 97-2003(.xls) file format, then use HSSF* classes.
  * @author Xuan Ngo
  */
 import java.io.FileOutputStream;
@@ -44,8 +44,8 @@ public class PoiExample{
             // Read an Excel file.
             //***********************************
  
-            // WorkbookFactory create the appropriate kind of Workbook (be it HSSFWorkbook or XSSFWorkbook), 
-            //	by auto-detecting from the supplied input.
+            // WorkbookFactory creates the appropriate kind of Workbook
+            //	(HSSFWorkbook or XSSFWorkbook), by auto-detecting from the supplied file.
             Workbook readWorkbook = WorkbookFactory.create(new FileInputStream("new_workbook.xls") );
  
             // Get the first sheet.
@@ -56,7 +56,7 @@ public class PoiExample{
             Cell cell = row.getCell(0);
  
             // Show what is being read.
-            System.out.println("Read cell(0,0)="+cell.toString());
+            System.out.println("Value of cell(0,0) is "+cell.toString());
  
             
             // Close the workbook.
